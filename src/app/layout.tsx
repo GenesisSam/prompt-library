@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Prompt Library",
@@ -19,6 +17,17 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <nav style={{ padding: "1rem" }}>
+            <Link href="/" style={{ marginRight: "1rem" }}>
+              홈
+            </Link>
+            <Link href="/papers" style={{ marginRight: "1rem" }}>
+              프롬프트 목록
+            </Link>
+            <Link href="/users" style={{ marginRight: "1rem" }}>
+              유저저
+            </Link>
+          </nav>
           {children}
         </ThemeProvider>
       </body>
