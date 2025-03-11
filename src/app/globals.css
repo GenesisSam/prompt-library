@@ -55,3 +55,8 @@ a {
     color-scheme: dark;
   }
 }
+
+.scroll-region {
+  height: 100%;
+  overflow-y: auto;
+}
