@@ -7,6 +7,7 @@ const Container = styled.div`
   flex: 1;
   min-width: 0;
   min-height: 0;
+  padding: 16px;
 `;
 
 const ContentBody = ({ children }: React.PropsWithChildren) => {
